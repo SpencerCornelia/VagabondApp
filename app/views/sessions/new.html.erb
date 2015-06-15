@@ -1,1 +1,16 @@
-new.html.erb
+<!-- new.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<%= form_for :user, url: login_path, method: "post" do |f| %>
+			<%= f.string :email, placeholder: "Email" %>
+			<%= f.string :password, placeholder: "Password" %>
+			<%= f.submit "Sign In" %>
+		<% end %>
+	</div>
+</body>
+</html>
