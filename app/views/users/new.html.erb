@@ -1,1 +1,21 @@
-new.html.erb
+<!-- new.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Welcome to sign up!</h1>
+	<div>
+		<%= form_for user do |f| %>
+			<%= f.string :first_name, placeholder: "First Name" %>
+			<%= f.string :last_name, placeholder: "Last Name" %>
+			<%= f.string :current_city, placeholder: "Current City" %>
+			<%= f.email_field :email, placeholder: "Email" %>
+			<%= f.password_field :password, placeholder: "Password" %>
+			<%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+			<%= f.submit "Sign Up" %> 
+		<% end %>
+	</div>
+</body>
+</html>
