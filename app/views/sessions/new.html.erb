@@ -6,9 +6,9 @@
 </head>
 <body>
 	<div>
-		<%= form_for :user, url: login_path, method: "post" do |f| %>
-			<%= f.string :email, placeholder: "Email" %>
-			<%= f.string :password, placeholder: "Password" %>
+		<%= form_for @user, method: "post" do |f| %>
+			<%= f.email_field :email, placeholder: "Email" %>
+			<%= f.password_field :password, placeholder: "Password" %>
 			<%= f.submit "Sign In" %>
 		<% end %>
 	</div>

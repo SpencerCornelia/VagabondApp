@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-	before_action :logged_in?, except: [:new, :create]
-	before_action :set_user, only: [:edit, :update] #maybe add destory later, like in Del's drill solution
+	# before_action :logged_in?, except: [:new, :create]
+	#before_action :set_user, only: [:edit, :update] #maybe add destory later, like in Del's drill solution
 	def index
 		@users = User.all
 		render :index
@@ -42,6 +42,7 @@ class UsersController < ApplicationController
 		logout
 		redirect_to "/"
 	end
+
 
 	private
 		def set_user
