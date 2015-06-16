@@ -19,3 +19,7 @@ much longer so that I can check and see if I should add any limits to
 the post length. For example, if I was someone who loved to write and write
 and write, would that be a problem? Would you still love me? Would you wish
 that I was not quite so verbose? I would love to know your real thoughts.')
+
+Place.create(name: 'London')
+Place.create(name: 'Gibraltar')
+Place.create(name: 'San Francisco')
