@@ -1,1 +1,11 @@
-new.html.erb
+New Post
+
+<%= form_for @post do |f| %>
+	<div>
+		<%= f.text_field :title, placeholder: "Please enter place" %>
+	</div>
+	<div>
+		<%= f.text_area :body, placeholder: "Please enter description" %>
+	</div>	
+	<%= f.submit "Submit New Post" %>
+<% end %>
