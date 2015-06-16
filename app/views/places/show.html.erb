@@ -1,1 +1,19 @@
-show.html.erb
+<!-- needed to sketch out how the page would look so I could get a better grasp of what
+	the place and post controllers need to do => Rebecca
+ -->
+<h1> <%= @place.name %> </h1>
+<!-- add image here -->
+<ul>
+	<!-- text boxes(or button that reveals text boxes) that correspond to title and body -->
+	<!-- submit button for text boxes must POST to posts#create  -->
+<%@place.posts.each do |post| %>
+	<li> <%= post.title %>
+		 <%= post.body %>
+		 <!-- if the current user wrote this post -->
+		 <% if post.user_id == current_user.id %>
+		 <!-- button that will let user edit their post -->
+		 <!-- button that will let user delete their post -->
+		 <%end %>
+	</li>
+<% end %>
+</ul>
