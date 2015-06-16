@@ -9,7 +9,7 @@
 		</video>
 		<div class="row">
  			<div class="col-xs-6 col-xs-offset-5" id="btnDiv"><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-			  Launch demo modal
+			  Sign Up
 			</button></div>
 		</div>
 	<!-- Modal -->
@@ -21,31 +21,33 @@
 	        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
 	      </div>
 	      <div class="modal-body">
-	        <form>
+	      	<!-- TODO: refactor with rails form_for -->
+	        <form action="/users" method="post">
 			  <div class="form-group">
 			    <label for="exampleInputFirstName">First Name</label>
-			    <input type="text" class="form-control" id="exampleInputFirstName" placeholder="First Name">
+			    <input type="text" name="user[first_name]" class="form-control" id="exampleInputFirstName" placeholder="First Name">
 			  </div>
 			  <div class="form-group">
 			    <label for="exampleInputLastName">Last Name</label>
-			    <input type="text" class="form-control" id="exampleInputLastName" placeholder="Last Name">
+			    <input type="text" name="user[last_name]" class="form-control" id="exampleInputLastName" placeholder="Last Name">
 			  </div>
 			  <div class="form-group">
 			    <label for="exampleInputEmail1">Email address</label>
-			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+			    <input type="email" name="user[email]" class="form-control" id="exampleInputEmail1" placeholder="Email">
 			  </div>
 			  <div class="form-group">
 			    <label for="exampleInputPassword1">Password</label>
-			    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			    <input type="password" name="user[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
 			  </div>
 			  <div class="form-group">
 			    <label for="exampleInputPasswordConfirm">Password Confirmation</label>
-			    <input type="password" class="form-control" id="exampleInputPasswordConfirm" placeholder="Confirm Password">
+			    <input type="password" name="user[password_confirmation]" class="form-control" id="exampleInputPasswordConfirm" placeholder="Confirm Password">
 			  </div>
 			  <div class="form-group">
-			    <label for="exampleInputFile">Profile Picture</label>
-			    <input type="file" id="exampleInputFile">
+			    <label for="exampleInputCurrentCity">Current City</label>
+			    <input type="text" name="user[current_city]" class="form-control" id="exampleInputCurrentCity" placeholder="Current City">
 			  </div>
+			  <%= token_tag form_authenticity_token %>
 			  <button type="submit" class="btn btn-default">Submit</button>
 			</form>
 	      </div>
