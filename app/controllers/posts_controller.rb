@@ -12,12 +12,15 @@ class PostsController < ApplicationController
 	def create
 		post_params = params.require(:post).permit(:title, :body)
 		@post = Post.create(post_params)
-		current_user.posts.push(@post)
-		redirect_to "/users/#{@user.id}"
+		@user = current_user
+		@user.posts.push(@post)
+		redirect_to "/posts/#{@post.id}"
 		# redirect_to #city show page
 	end
 
 	def show
+		@post = Post.find(params[:id])
+		render :show
 	end
 
 	def edit
