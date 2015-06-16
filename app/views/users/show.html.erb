@@ -1,6 +1,6 @@
-<%= @user.first_name%>
-<%= @user.last_name%>
-<%= @user.email%>
-<%= @user.current_city%>
+<%= @user.first_name %>
+<%= @user.last_name %>
+<%= @user.email %>
+<%= @user.current_city %>
 <%= button_to "edit info", { action: "get"}, method: :edit %> 
 <%= button_to "Log out", { action: "delete", id: @user.id}, method: :delete %> 
