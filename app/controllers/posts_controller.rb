@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 	def index
 		@posts = Post.all
+		# TODO: something
 		render :index
 	end
 
@@ -12,6 +13,8 @@ class PostsController < ApplicationController
 	def create
 		post_params = params.require(:post).permit(:title, :body)
 		@post = Post.create(post_params)
+		# FIXME: something else
+		# CUSTOM: blah
 		current_user.posts.push(@post)
 		redirect_to "/users/#{@user.id}"
 		# redirect_to #city show page
