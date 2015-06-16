@@ -21,6 +21,12 @@
 	        <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
 	      </div>
 	      <div class="modal-body">
+	      	<% form_for @user do |f| %>
+	      		<div class="form-group">
+	      		<% f.label :exampleInputFirstName, "FirstName" %>
+	      		<% f.text_field :exampleInputFirstName, {class: "form-control", placeholder: "First Name"} %>
+	      		</div>
+	      	<% end %>
 	        <form>
 			  <div class="form-group">
 			    <label for="exampleInputFirstName">First Name</label>
