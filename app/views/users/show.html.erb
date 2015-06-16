@@ -1,4 +1,7 @@
-<%= @user.first_name%>
-<%= @user.last_name%>
-<%= @user.email%>
-<%= @user.current_city%>
+<%= image_tag @user.gravatar_url %>
+<%= @user.first_name %><br>
+<%= @user.last_name%> <br>
+<ul>	
+	<li> <%= @user.email%> </li>
+	<li> <%= @user.current_city%> </li>
+</ul>
