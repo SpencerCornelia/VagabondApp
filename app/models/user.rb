@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-	include Gravtastic
-	gravtastic :size => 120 
+	# include Gravtastic
+	# gravtastic :size => 120 
 	
 	has_many :posts
 
