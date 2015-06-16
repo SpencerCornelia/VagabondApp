@@ -1,6 +1,15 @@
-<%= @user.first_name%>
-<%= @user.last_name%>
-<%= @user.email%>
-<%= @user.current_city%>
-<%= button_to "edit info", { action: "get"}, method: :edit %> 
-<%= button_to "Log out", { action: "delete", id: @user.id}, method: :delete %> 
+<%= @user.first_name %><br>
+<%= @user.last_name %><br>
+<%= @user.email %><br>
+<%= @user.current_city %><br>
+<%= @user.created_at %><br>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li><%= post.title %>
+        <%= post.body %>
+    </li>
+  <% end %>
+</ul>
+<br>
+ 
