@@ -1,6 +1,7 @@
+<%= image_tag @user.gravatar_url %> 
 <%= @user.first_name%>
-<%= @user.last_name%>
-<%= @user.email%>
-<%= @user.current_city%>
-<%= button_to "edit info", { action: "get"}, method: :edit %> 
-<%= button_to "Log out", { action: "delete", id: @user.id}, method: :delete %> 
+<%= @user.last_name%> <br>
+<ul>	
+	<li> <%= @user.email%> </li>
+	<li> <%= @user.current_city%> </li>
+</ul>
