@@ -31,5 +31,7 @@ Rails.application.routes.draw do
 
   put '/posts/:id', to: 'posts#update'
 
+  get '/places', to: 'places#index'
+
 
 end
