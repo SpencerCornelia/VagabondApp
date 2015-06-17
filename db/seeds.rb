@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+	# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -19,3 +19,7 @@ much longer so that I can check and see if I should add any limits to
 the post length. For example, if I was someone who loved to write and write
 and write, would that be a problem? Would you still love me? Would you wish
 that I was not quite so verbose? I would love to know your real thoughts.')
+
+Place.create(name: 'London')
+Place.create(name: 'Gibraltar')
+Place.create(name: 'San Francisco')

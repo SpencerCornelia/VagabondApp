@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "welcome#index"
 
-  get "/users", to: "users#index"
+  get "/users", to: "users#index", as: "users"
 
   get "/users/new", to: "users#new"
 
@@ -30,6 +30,10 @@ Rails.application.routes.draw do
   get '/posts/:id/edit', to: 'posts#edit'
 
   put '/posts/:id', to: 'posts#update'
+
+  get '/places', to: 'places#index'
+
+  get '/places/:id', to: 'places#show'
 
 
 end
