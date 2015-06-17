@@ -1,0 +1,4 @@
+<%= truncate(@post.title, length: 10, separator: ' '){ link_to "More", "#" }
+ %><br>
+<%= truncate(@post.body, length: 200, separator: ' '){ link_to "More", "#" }
+ %><br>
