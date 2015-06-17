@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "welcome#index"
 
-  get "/welcome"
-
   get "/users", to: "users#index", as: "users"
 
   get "/users/new", to: "users#new"
@@ -17,7 +15,7 @@ Rails.application.routes.draw do
 
   get "/sign_in", to: "sessions#new"
 
-  post "/sessions", to: "sessions#destroy"
+  post "/sessions", to: "sessions#create"
 
   delete "/users/:id", to: "users#delete"
 
@@ -36,6 +34,8 @@ Rails.application.routes.draw do
   get '/places', to: 'places#index'
 
   get '/places/:id', to: 'places#show'
+
+  post '/places', to: 'places#create'
 
 
 end

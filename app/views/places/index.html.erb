@@ -1,9 +1,16 @@
 <h1>Blah</h1>
 <body>
-	<form>
+	<%= form_for @place do |f| %>
+	<%= f.text_field :name, placeholder: "find a place", id: "pac-input" %>
+	<%= f.hidden_field : %>
+	<%= f.submit "search" %>
+	<% end %>
+
+	<!-- <form class"google-place-bar">
 		<input id="pac-input" class="controls" type="text"
         placeholder="Enter a location" size="50">
-	</form>
+        <button type="submit" class="search-button">Submit</button>
+	</form> -->
 
 </body>
 <script type="text/javascript">
