@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: "welcome#index"
 
-  get "/welcome"
-
   get "/users", to: "users#index", as: "users"
 
   get "/users/new", to: "users#new"
