@@ -39,8 +39,6 @@ class UsersController < ApplicationController
 	end
 
 	def delete
-		logout
-		redirect_to "/"
 	end
 
 
