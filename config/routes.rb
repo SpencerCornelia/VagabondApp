@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   post "/users", to: "users#create"
 
-  get "/users/:id", to: "users#show", as: "users_show"
+  get "/users/:id", to: "users#show", as: "user_show"
 
   get "/users/:id/edit", to: "users#edit", as: "edit_user"
 
@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get "/sign_in", to: "sessions#new"
 
-  post "/sessions", to: "sessions#destroy"
+  get "/sessions", to: "sessions#destroy", as: "user_logout"
 
   delete "/users/:id", to: "users#delete"
 
@@ -31,7 +31,7 @@ Rails.application.routes.draw do
 
   put '/posts/:id', to: 'posts#update'
 
-  get '/places', to: 'places#index'
+  get '/places', to: 'places#index', as: "places"
 
   get '/places/:id', to: 'places#show'
 

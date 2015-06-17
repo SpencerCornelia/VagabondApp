@@ -15,9 +15,9 @@
 <div class="container">
     <div class="row">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><%= link_to "Profile", "/users/:id" %></a></li>
-            <li role="presentation"><a href="/places">Places</a></li>
-            <li role="presentation"><a href="/welcome">Logout</a></li>
+            <li role="presentation" class="active"><a href="<%= "#{user_show_path(current_user)}" %>">Profile</a></li>
+            <li role="presentation" class="active"><a href="<%= "#{places_path}" %>">Places</a></li>
+            <li role="presentation" class="active"><a href="<%= "#{user_logout_path}" %>">Logout</a></li>
 
         </ul>
     </div>
