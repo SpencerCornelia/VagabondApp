@@ -16,9 +16,8 @@
     <div class="row">
         <ul class="nav nav-tabs">
             <li role="presentation" class="active"><%= link_to "Profile", users_path %></a></li>
-            <li role="presentation"><a href="../places/show.html.erb">Places</a></li>
+            <li role="presentation"><a href="../places/:id">Places</a></li>
             <li role="presentation"><a href="../welcome/index.html.erb">Logout</a></li>
-            <%= @user.current_city %>
         </ul>
     </div>
 </div>
