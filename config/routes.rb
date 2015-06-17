@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   get "/sign_in", to: "sessions#new"
 
-  post "/sessions", to: "sessions#create"
+  post "/sessions", to: "sessions#destroy"
 
   delete "/users/:id", to: "users#delete"
 
