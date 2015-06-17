@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+<%= render partial: "navbar" %>
 <!-- needed to sketch out how the page would look so I could get a better grasp of what
 	the place and post controllers need to do => Rebecca
  -->
@@ -6,7 +7,7 @@
 <!-- add image here -->
 
 	<!-- text boxes(or button that reveals text boxes) that correspond to title and body -->
-	<!-- submit button for text boxes must POST to posts#create  -->
+	<!-- submit button for text boxes must POST to posts#create  -->	
 	<%= form_for @post do |f| %>
 		<div>
 			<%= f.text_field :title, placeholder: "Title goes here" %>
@@ -30,6 +31,3 @@
 			<%end %>
 	<% end %>
 </ul>
-=======
-<%= render partial: "../views/navbar.html.erb" %>
->>>>>>> e5489d4e9c045529e13dbf2a9626d552b622e4d8
