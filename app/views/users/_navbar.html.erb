@@ -15,10 +15,9 @@
 <div class="container">
     <div class="row">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><%= link_to "Profile", users_path %></a></li>
-            <li role="presentation"><a href="../places/show.html.erb">Places</a></li>
-            <li role="presentation"><a href="../welcome/index.html.erb">Logout</a></li>
-            <%= @user.current_city %>
+            <li role="presentation" class="active"><a href= <%= "#{user_show_path}" %> >Profile</a></li>
+            <li role="presentation" class="active"><a href= <%= "#{places_path}" %> >Places</a></li>
+            <li role="presentation" class="active"><a href= <%= "#{user_logout_path}" %> >Logout</a></li>
         </ul>
     </div>
 </div>
