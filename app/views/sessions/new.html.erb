@@ -5,6 +5,7 @@
 	<title></title>
 </head>
 <body>
+<%= render partial: "navbar" %>
 	<div>
 		<%= form_for @user, url: "/sessions", method: "post" do |f| %>
 			<%= f.email_field :email, placeholder: "Email" %>
