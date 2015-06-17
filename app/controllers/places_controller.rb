@@ -17,4 +17,5 @@ class PlacesController < ApplicationController
 		@place = Place.find(params[:id])
 		render :show
 	end
+	include ActionView::Helpers::TextHelper
 end

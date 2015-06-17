@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  include ActionView::Helpers::TextHelper
+
 	def index
 		@posts = Post.all
 		render :index

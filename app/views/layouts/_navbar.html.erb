@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><%= link_to "Profile", users_path %></a></li>
+            <li role="presentation"><a href="../places/show.html.erb">Places</a></li>
+            <li role="presentation"><a href="../welcome/index.html.erb">Logout</a></li>
+            <%= current_user.current_city %>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
