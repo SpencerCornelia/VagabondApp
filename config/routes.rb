@@ -33,7 +33,7 @@ Rails.application.routes.draw do
 
   get '/places', to: 'places#index'
 
-  get '/places', to: 'places#show'
+  get '/places/:id', to: 'places#show'
 
 
 end

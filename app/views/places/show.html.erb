@@ -3,17 +3,29 @@
  -->
 <h1> <%= @place.name %> </h1>
 <!-- add image here -->
-<ul>
+
 	<!-- text boxes(or button that reveals text boxes) that correspond to title and body -->
 	<!-- submit button for text boxes must POST to posts#create  -->
-<%@place.posts.each do |post| %>
-	<li> <%= post.title %>
-		 <%= post.body %>
-		 <!-- if the current user wrote this post -->
-		 <% if post.user_id == current_user.id %>
-		 <!-- button that will let user edit their post -->
-		 <!-- button that will let user delete their post -->
-		 <%end %>
-	</li>
-<% end %>
+	<%= form_for @post do |f| %>
+		<div>
+			<%= f.text_field :title, placeholder: "Title goes here" %>
+		</div>
+		<div>
+			<%= f.text_area :body, placeholder: "Body goes here" %>
+		</div>
+		<div style="display: none">
+			<%= f.text_field :place_id, value: "#{@place.id}" %>
+		</div>
+		<%= f.submit "Submit New Post" %>
+	<% end %>
+<ul>
+	<%@place.posts.each do |post| %>
+		<h4> <%= post.title %> </h3>
+			<p> <%= post.body %> <p>
+			<!-- if the current user wrote this post -->
+			<% if post.user_id == current_user.id %>
+			<!-- button that will let user edit their post -->
+			<!-- button that will let user delete their post -->
+			<%end %>
+	<% end %>
 </ul>
