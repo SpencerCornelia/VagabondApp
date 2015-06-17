@@ -1,12 +1,39 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 #video {
-	position: relative;
 	width: 100%;
 }
+.video-wrapper {
+	position: relative;
+	text-align: center;
+}
 
-#btnDiv {
+#appLogo {
 	position: absolute;
+	top: 25%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+}
+
+#soundBite {
+    position: absolute;
+    top: 36%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+#modal-btn {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#formToggle {
+	margin: 20px auto;
+}
+
+#formToggle2 {
+	margin: 20px auto;
 }
