@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<!-- Latest compiled and minified CSS -->
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -15,10 +15,9 @@
 <div class="container">
     <div class="row">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><%= link_to "Profile", users_path %></a></li>
-            <li role="presentation"><a href="../places/show.html.erb">Places</a></li>
-            <li role="presentation"><a href="../welcome/index.html.erb">Logout</a></li>
-            <%= current_user.current_city %>
+            <li role="presentation" class="active"><a href="<%= "#{user_show_path(current_user)}" %>">Profile</a></li>
+            <li role="presentation" class="active"><a href="<%= "#{places_path(current_user)}" %>">Places</a></li>
+            <li role="presentation" class="active"><a href="<%= "#{user_logout_path}" %>">Logout</a></li>
         </ul>
     </div>
 </div>
