@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get "/sign_in", to: "sessions#new"
 
   post "/sessions", to: "sessions#create"
-
+  
   get "/sessions", to: "sessions#destroy", as: "user_logout"
 
   delete "/users/:id", to: "users#delete"
@@ -36,6 +36,8 @@ Rails.application.routes.draw do
   get '/places', to: 'places#index', as: "places"
 
   get '/places/:id', to: 'places#show'
+
+  post '/places', to: 'places#create'
 
 
 end
