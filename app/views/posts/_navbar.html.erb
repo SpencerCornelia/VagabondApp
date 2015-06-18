@@ -15,9 +15,13 @@
 <div class="container">
     <div class="row">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href= <%= "#{user_show_path(current_user)}" %> >Profile</a></li>
+            <% if current_user != nil%>
+            	<li role="presentation" class="active"><a href= <%= "#{user_show_path(current_user)}" %> >Profile</a></li>
+            <% end %>
             <li role="presentation" class="active"><a href= <%= "#{places_path}" %> >Places</a></li>
-            <li role="presentation" class="active"><a href= <%= "#{user_logout_path}" %> >Logout</a></li>
+            <% if current_user != nil%>
+            	<li role="presentation" class="active"><a href= <%= "#{user_logout_path}" %> >Logout</a></li>
+            <% end %>
 
         </ul>
     </div>

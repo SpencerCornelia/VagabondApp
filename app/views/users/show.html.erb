@@ -1,3 +1,4 @@
+<%= render partial: "layouts/navbar" %>
 <div id="backgroundImg" class="image-wrapper">
 		<img id="laPic" src="http://static.nfl.com/static/content/public/photo/2014/08/01/0ap1000000372465.jpg">
 	<div id="profilePic" class="img-responsive aspect">
@@ -5,9 +6,9 @@
 	</div>
 <div id="userInfo">
 	<ul>
-	<% current_user.posts.each do |p| %>
-		<%= link_to "Edit Profile", controller: "users", action: "edit", id: @user.id %> <br>
-	<% end %>
+		<% if @user == current_user%>
+			<span class="text"><%= link_to "Edit Profile", controller: "users", action: "edit", id: @user.id %> </span> <br>
+		<% end %>
 
     <div> <%= @user.first_name%>
          <%= @user.last_name%> </div>	
@@ -17,11 +18,11 @@
 	<div> <%= @user.created_at.strftime("Member since #{join_date}") %> </div>
 </ul>	
 <ul>
-	<h2> Your posts </h2>
+	<h2> Posts </h2>
 
 	<% @user.posts.each do |p| %>
-		<span class="post-title" style="font-size: 25px"><%= link_to p.title, "/posts/#{p.id}" %> </span> - 
-		<span style="font-size: 18px"> <%= link_to p.place.name, "/places/#{p.place_id}" %> </span> <br>
+		<span class="text" style="font-size: 25px"><%= link_to p.title, "/posts/#{p.id}" %> </span> - 
+		<span class="text" style="font-size: 18px"> <%= link_to p.place.name, "/places/#{p.place_id}" %> </span> <br>
 	<% end %>	
 </ul>
 </div>
