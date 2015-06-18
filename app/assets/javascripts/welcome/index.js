@@ -1,6 +1,7 @@
 vagabond.memberSignIn = function() {
 	$("#formToggle").on('click', function(){
 		var modalHeader = $("#myModalLabel").html("Sign In");
+		console.log("this works");
 		$("#signDiv").hide();
 		$("#logDiv").show();
 		//more logic

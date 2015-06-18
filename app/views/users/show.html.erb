@@ -1,7 +1,14 @@
-<%= render partial: "navbar" %>
-<%= image_tag @user.gravatar_url %>
-<%= link_to "Edit", controller: "users", action: "edit", id: @user.id %> <br>
-<ul>
+<div id="backgroundImg" class="image-wrapper">
+		<img id="laPic" src="http://static.nfl.com/static/content/public/photo/2014/08/01/0ap1000000372465.jpg">
+	<div id="profilePic" class="img-responsive aspect">
+		<%= image_tag @user.gravatar_url %>
+	</div>
+<div id="userInfo">
+	<ul>
+	<% current_user.posts.each do |p| %>
+		<%= link_to "Edit Profile", controller: "users", action: "edit", id: @user.id %> <br>
+	<% end %>
+
     <div> <%= @user.first_name%>
          <%= @user.last_name%> </div>	
 	<div>Contact: <%= @user.email%> </div>
@@ -17,4 +24,4 @@
 		<span style="font-size: 18px"> <%= link_to p.place.name, "/places/#{p.place_id}" %> </span> <br>
 	<% end %>	
 </ul>
-
+</div>
