@@ -1,0 +1,10 @@
+<form action="/users/<%=@user.id %>" method="post">
+	<input name="_method" type="hidden" value="put">
+	<input type="text" name="user[first_name]" value="<%= @user.first_name %>"> 
+	<input type="text" name="user[last_name]" value="<%= @user.last_name %>">
+	<input type="text" name="user[current_city]" value="<%= @user.current_city %>">
+	<%= token_tag form_authenticity_token %>
+
+	<button> Submit! </button> 
+
+</form>

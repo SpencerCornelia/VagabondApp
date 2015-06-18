@@ -1,16 +1,32 @@
+<<<<<<< HEAD
 <!-- needed to sketch out how the page would look so I could get a better grasp of what
 	the place and post controllers need to do => Rebecca
  -->
+=======
+<%= render partial: "navbar" %>
+>>>>>>> 4ea3fab742c2a1fee8950f61360dac4d6f6ee760
  
-<h1> <%= @place.name %> </h1>
-<!-- add image here -->
+<h1 id="headerName"> <%= @place.name %> </h1>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<body>
+	<div id="googleMap" style="width:500px;height:380px;"></div>
+</body>
 
-	<!-- text boxes(or button that reveals text boxes) that correspond to title and body -->
-	<!-- submit button for text boxes must POST to posts#create  -->	
+<script type="text/javascript">
+	$(function(){
+		var mapProp = {
+	    center:new google.maps.LatLng(<%= @lat_long %>),
+	    zoom:11,
+	    mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+	  	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	})
+</script>	
+<div id="formTitle">
 	<%= form_for @post do |f| %>
 		<div>
 			<%= f.text_field :title, placeholder: "Title goes here" %>
-		</div>
+		</div>		
 		<div>
 			<%= f.text_area :body, placeholder: "Body goes here" %>
 		</div>
@@ -19,14 +35,20 @@
 		</div>
 		<%= f.submit "Submit New Post" %>
 	<% end %>
+</div>
+<div id="postListing">	
 <ul>
 	<%@place.posts.each do |post| %>
 		<h4> <%= post.title %> </h3>
+</div>
+<div id="postListing2">			
 			<p> <%= post.body %> <p>
 			<!-- if the current user wrote this post -->
 			<% if post.user_id == current_user.id %>
-			<!-- button that will let user edit their post -->
-			<!-- button that will let user delete their post -->
+			<%= link_to "Edit", controller: "posts", action: "edit", id: post.id %> <br>
+			<%= button_to('Delete', "/posts/#{post.id}", method: "delete") %>
 			<%end %>
 	<% end %>
+</div>	
 </ul>
+</div>
