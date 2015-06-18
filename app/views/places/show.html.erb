@@ -1,6 +1,6 @@
 <%= render partial: "navbar" %>
  
-<h1> <%= @place.name %> </h1>
+<h1 id="headerName"> <%= @place.name %> </h1>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <body>
 	<div id="googleMap" style="width:500px;height:380px;"></div>
@@ -16,10 +16,11 @@
 	  	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 	})
 </script>	
+<div id="formTitle">
 	<%= form_for @post do |f| %>
 		<div>
 			<%= f.text_field :title, placeholder: "Title goes here" %>
-		</div>
+		</div>		
 		<div>
 			<%= f.text_area :body, placeholder: "Body goes here" %>
 		</div>
@@ -28,9 +29,13 @@
 		</div>
 		<%= f.submit "Submit New Post" %>
 	<% end %>
+</div>
+<div id="postListing">	
 <ul>
 	<%@place.posts.each do |post| %>
 		<h4> <%= post.title %> </h3>
+</div>
+<div id="postListing2">			
 			<p> <%= post.body %> <p>
 			<!-- if the current user wrote this post -->
 			<% if post.user_id == current_user.id %>
@@ -38,4 +43,6 @@
 			<%= button_to('Delete', "/posts/#{post.id}", method: "delete") %>
 			<%end %>
 	<% end %>
+</div>	
 </ul>
+</div>

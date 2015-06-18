@@ -21,15 +21,19 @@
 	<ul>
 		<li>Russia</li>
 		<li>Spain</li>
-			<ul><%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %> <br>
-			<%= link_to "London", controller: "places", action: "show", id: 1 %> <br></ul>
-	</ul
+			<ul>
+				<li><%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %></li> <br>
+				<li><%= link_to "London", controller: "places", action: "show", id: 1 %> </li> <br>
+			</ul>
+	</ul>
 <div>North America</div>
 	<ul>
 		<li>Canada</li>
 		<li>Mexico</li>
 		<li>United States</li>
-			<ul><%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> <br></ul>	
+			<ul>
+				<li><%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> </li><br>
+			</ul>	
 	</ul>
 <div>South America</div>
 
