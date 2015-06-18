@@ -1,12 +1,30 @@
 console.log("place index required!");
 
-var placesAutoComplete = function() {
-	// the following code is from: http://jsfiddle.net/moinsam/SDPHm/
-	var input = document.getElementById('pac-input');
-	var options = {componentRestrictions: {country: 'us'}};
-	// var value = input.val()
-	// console.log(value)
-	    
-	new google.maps.places.Autocomplete(input, options);
+var clickFunction = function () {
+	var userSearch = $(".search-button").on("click", function (event) {
+		var search = grabUserInput();
+		console.log(search);
+		var response = googleApiCall(search, function(){});
+		console.log(response);
+		event.preventDefault();
+		//do the google api call here
+		//grab info
+		//redirect user to place page
+	})
 };
-//define functions
+
+var grabUserInput = function () {
+	var searchField = $(".search").val();
+	return searchField;
+}
+
+//calls 
+var googleApiCall = function (searchData, callback) {
+	$.get(url, {
+				input: searchData,
+				key: APP_KEY 
+			}, callback);
+
+}		
+
+
