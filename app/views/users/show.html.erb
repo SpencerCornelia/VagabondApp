@@ -3,18 +3,11 @@
 	<div id="profilePic" class="img-responsive aspect">
 		<%= image_tag @user.gravatar_url %>
 	</div>
-	<div id="userInfo">
-		<ul id="infoList">
-		    <li> <%= @user.first_name%>
-		         <%= @user.last_name%> </li>	
-			<li> <%= @user.email%> </li>
-			<li> <%= @user.current_city%> </li>
-		</ul>	
-	</div>
-</div>
-<div>
-		<% current_user.posts.each do |p| %>
-<%= link_to "Edit", controller: "users", action: "edit", id: @user.id %> <br>
+<div id="userInfo">
+	<ul>
+	<% current_user.posts.each do |p| %>
+		<%= link_to "Edit Profile", controller: "users", action: "edit", id: @user.id %> <br>
+	<% end %>
 
     <div> <%= @user.first_name%>
          <%= @user.last_name%> </div>	

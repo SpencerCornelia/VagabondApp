@@ -1,7 +1,6 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-<<<<<<< HEAD
 
 #laPic {
   position: relative;
@@ -10,11 +9,15 @@
 
 #userInfo {
   position: absolute;
-  top: 80%;
-  left: 12%;
-  color: white;
+  top: 25%;
+  left: 50%;
   font-size: xx-large;
   font-weight: bolder;
+  color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+
 }
 
 #infoList {
@@ -26,9 +29,4 @@
   margin: 0 auto;
   top: 25%;
   left: 10%;
-
-=======
-.title {
-	font-size: 25px
->>>>>>> 4ea3fab742c2a1fee8950f61360dac4d6f6ee760
 }
