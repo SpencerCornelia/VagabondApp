@@ -1,13 +1,61 @@
 <%= render partial: "navbar" %>
-<h1>Blah</h1>
-<body>
+<h1 id="places-index-header">Places To See</h1>
+<body id="list-of-places">
 	<form>
 		<input id="pac-input" class="controls" type="text"
         placeholder="Enter a location" size="50">
 	</form>
+<div class="continent">Africa</div>
+	<ul>
+		<li class="country">Nigeria</li>
+		<li class="country">Ethiopia</li>
+		<li class="country">Egypt</li>
+	</ul>
+<div class="continent">Antarctica</div>
+	<ul>
+		<li class="country">Ice</li>
+	</ul>
+<div class="continent">Asia</div>
+<div class="continent">Australia</div>
+<div class="continent">Europe</div>
+	<ul>
+		<li class="country">Russia</li>
+		<li class="country">Spain</li>
+			<ul>
+				<li class="cities"> <%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %> </li>
+				<li class="cities"> <%= link_to "London", controller: "places", action: "show", id: 1 %> </li><br>
+			</ul>
+	</ul>
+<div class="continent">North America</div>
+	<ul>
+		<li class="country">Canada</li>
+		<li class="country">Mexico</li>
+		<li class="country">United States</li>
+		<ul>
+			<li class="cities"><%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> <br></li>	
+		</ul>
+		<li>Russia</li>
+		<li>Spain</li>
+			<ul>
+				<li><%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %></li> <br>
+				<li><%= link_to "London", controller: "places", action: "show", id: 1 %> </li> <br>
+			</ul>
+	</ul>
+<div>North America</div>
+	<ul>
+		<li>Canada</li>
+		<li>Mexico</li>
+		<li>United States</li>
+			<ul>
+				<li><%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> </li><br>
+			</ul>	
+>>>>>>> a003bcdfbb5e0af3edebcb4b2e9064ae008fbd7a
+	</ul>
+<div class="continent">South America</div>
 
 </body>
 <script type="text/javascript">
-	placesAutoComplete()	
+	// placesAutoComplete()	
+	//clickFunctio
 
 </script>

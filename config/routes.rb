@@ -37,5 +37,8 @@ Rails.application.routes.draw do
 
   get '/places/:id', to: 'places#show'
 
+  post '/places', to: 'places#create'
+
+  delete '/posts/:id', to: 'posts#delete'
 
 end
