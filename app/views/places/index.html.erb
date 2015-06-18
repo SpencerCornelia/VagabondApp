@@ -1,13 +1,38 @@
 <%= render partial: "navbar" %>
-<h1>Places To See</h1>
+<h1 id="places-index-header">Places To See</h1>
 <body>
 	<form>
 		<input id="pac-input" class="controls" type="text"
         placeholder="Enter a location" size="50">
 	</form>
-<%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %> <br>
-<%= link_to "London", controller: "places", action: "show", id: 1 %> <br>
-<%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> <br>
+<div>Africa</div>
+	<ul>
+		<li>Nigeria</li>
+		<li>Ethiopia</li>
+		<li>Egypt</li>
+	</ul>
+<div>Antarctica</div>
+	<ul>
+		<li>Ice</li>
+	</ul>
+<div>Asia</div>
+<div>Australia</div>
+<div>Europe</div>
+	<ul>
+		<li>Russia</li>
+		<li>Spain</li>
+			<ul><%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %> <br>
+			<%= link_to "London", controller: "places", action: "show", id: 1 %> <br></ul>
+	</ul
+<div>North America</div>
+	<ul>
+		<li>Canada</li>
+		<li>Mexico</li>
+		<li>United States</li>
+			<ul><%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> <br></ul>	
+	</ul>
+<div>South America</div>
+
 
 </body>
 <script type="text/javascript">

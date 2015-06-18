@@ -7,6 +7,12 @@
 	<li> <%= @user.current_city%> </li>
 </ul>	
 <ul>
-	<li><%= @user.posts[0].body %></li>
+	<% current_user.posts.each do |p| %>
+
+		<%= link_to p.title, "/posts/#{p.id}" %> - 
+		<%= link_to p.place.name, "/places/#{p.place_id}" %><br>
+
+	<% end %>	
+
 </ul>
 
