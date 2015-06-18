@@ -1,8 +1,12 @@
 <%= render partial: "navbar" %>
 <%= image_tag @user.gravatar_url %>
 <ul>
-<%= @user.first_name%>
-<%= @user.last_name%> <br>	
+    <li> <%= @user.first_name%>
+         <%= @user.last_name%> </li>	
 	<li> <%= @user.email%> </li>
 	<li> <%= @user.current_city%> </li>
 </ul>	
+<ul>
+	<li><%= @user.posts[0].body %></li>
+</ul>
+
