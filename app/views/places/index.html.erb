@@ -1,10 +1,12 @@
-<%= render partial: "navbar" %>
-<h1>Blah</h1>
+<h1>Places To See</h1>
 <body>
 	<form>
 		<input id="pac-input" class="controls" type="text"
         placeholder="Enter a location" size="50">
 	</form>
+<%= link_to "Gibraltar", controller: "places", action: "show", id: 2 %> <br>
+<%= link_to "London", controller: "places", action: "show", id: 1 %> <br>
+<%= link_to "San Francisco", controller: "places", action: "show", id: 3 %> <br>
 
 </body>
 <script type="text/javascript">

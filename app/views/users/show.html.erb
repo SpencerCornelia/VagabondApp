@@ -1,12 +1,24 @@
-<%= render partial: "navbar" %>
-<%= image_tag @user.gravatar_url %>
-<ul>
-<%= @user.first_name%>
-<%= @user.last_name%> <br>	
-	<li> <%= @user.email%> </li>
-	<li> <%= @user.current_city%> </li>
-</ul>	
+<div id="backgroundImg" class="image-wrapper">
+		<img id="laPic" src="http://static.nfl.com/static/content/public/photo/2014/08/01/0ap1000000372465.jpg">
+	<div id="profilePic" class="img-responsive aspect">
+		<%= image_tag @user.gravatar_url %>
+	</div>
+	<div id="userInfo">
+		<ul id="infoList">
+		    <li> <%= @user.first_name%>
+		         <%= @user.last_name%> </li>	
+			<li> <%= @user.email%> </li>
+			<li> <%= @user.current_city%> </li>
+		</ul>	
+	</div>
+</div>
+<div>
+	<ul>
+		<% current_user.posts.each do |p| %>
 
-<ul>
-	<li><a href=""></a></li>
-</ul>
+			<%= link_to p.title, "/posts/#{p.id}" %>
+			 - <%= link_to p.place.name, "/places/#{p.place_id}" %>
+
+		<% end %>
+	</ul>
+</div>
