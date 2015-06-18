@@ -30,12 +30,11 @@ class UsersController < ApplicationController
 	end
 
 	def update
-		@user = @user.update_attributes(user_params)
-		if @user
-			redirect_to "/user/#{@user.id}"
-		else
-			redirect_to edit_user_path(current_user)
-		end
+		user_id = params[:id]
+		user = User.find(user_id)
+		updated_attributes = params.require(:user).permit(:first_name, :last_name, :current_city)
+		user.update_attributes(updated_attributes)
+		redirect_to "/users/#{user_id}"
 	end
 
 	def delete
