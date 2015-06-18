@@ -1,28 +1,21 @@
 <%= render partial: "navbar" %>
-<!-- needed to sketch out how the page would look so I could get a better grasp of what
-	the place and post controllers need to do => Rebecca
- -->
  
 <h1> <%= @place.name %> </h1>
-<!-- add image here -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <body>
 	<div id="googleMap" style="width:500px;height:380px;"></div>
 </body>
 
 <script type="text/javascript">
-	function initialize() {
-	  	var mapProp = {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
-	    zoom:5,
+	$(function(){
+		var mapProp = {
+	    center:new google.maps.LatLng(<%= @lat_long %>),
+	    zoom:11,
 	    mapTypeId:google.maps.MapTypeId.ROADMAP
 	  };
 	  	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-	<!-- text boxes(or button that reveals text boxes) that correspond to title and body -->
-	<!-- submit button for text boxes must POST to posts#create  -->	
+	})
+</script>	
 	<%= form_for @post do |f| %>
 		<div>
 			<%= f.text_field :title, placeholder: "Title goes here" %>
