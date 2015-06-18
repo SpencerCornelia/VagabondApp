@@ -45,6 +45,8 @@ class PostsController < ApplicationController
 
 	def delete
 		@post = Post.find(params[:id])
+		place = @post.place_id
 		@post.delete
+		redirect_to "/places/#{place}"
 	end
 end
