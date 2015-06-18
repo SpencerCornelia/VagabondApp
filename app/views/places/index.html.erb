@@ -1,20 +1,17 @@
 <%= render partial: "navbar" %>
-<h1>Blah</h1>
+<h1>Places</h1>
 <body>
-	<%= form_for @place do |f| %>
-	<%= f.text_field :name, placeholder: "find a place", id: "pac-input" %>
-	<%= f.hidden_field : %>
-	<%= f.submit "search" %>
-	<% end %>
-
-	<!-- <form class"google-place-bar">
-		<input id="pac-input" class="controls" type="text"
-        placeholder="Enter a location" size="50">
+	<!-- <form class"search-places-bar">
+		<input id="pac-input" class="search" type="text" placeholder="Enter a location" size="50">
         <button type="submit" class="search-button">Submit</button>
-	</form> -->
+	</form>
+	<div id="googleMap" style="width:500px;height:380px;"></div> -->
 
 </body>
+
+<%= link_to(San Francisco, "/places/3?37.7577,-122.4376") %>
 <script type="text/javascript">
-	placesAutoComplete()	
+	// placesAutoComplete()	
+	//clickFunctio
 
 </script>

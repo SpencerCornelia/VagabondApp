@@ -1,8 +1,10 @@
 class PlacesController < ApplicationController
 	def index
+
 		@place = Place.new
 		render :index
 	end
+
 
 	def create
 		place_params = params.require(:place).permit(:name)
@@ -12,6 +14,7 @@ class PlacesController < ApplicationController
 	end
 
 	def show
+		@params = params.require(:query).perm
 		@post = Post.new
 		@place = Place.find(params[:id])
 		render :show

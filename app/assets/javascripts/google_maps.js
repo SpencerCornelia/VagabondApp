@@ -1,37 +1,30 @@
-var url = "https://maps.googleapis.com/maps/api/place/autocomplete/JSON?"
-var APP_KEY = "AIzaSyBaJF-DtZ_zK2ZsKsfaNgchBdPUbIrMMJI"
-
-
 console.log("place index required!");
 
-var userSearch = $(".search-button").on("click", function (event) {
-	console.log("hello world")
-	event.preventDefault();
-	console.log(event.target);
-	var apiResponce = googleApiCall(event.target);
-	console.log(apiResponce)
-	//do the google api call here
-	//grab info
-	//redirect user to place page
-	this.submit();
-})
+var clickFunction = function () {
+	var userSearch = $(".search-button").on("click", function (event) {
+		var search = grabUserInput();
+		console.log(search);
+		var response = googleApiCall(search, function(){});
+		console.log(response);
+		event.preventDefault();
+		//do the google api call here
+		//grab info
+		//redirect user to place page
+	})
+};
 
-//calls 
-var googleApiCall = function (data) {
-	$.get(url, {
-				input: data,
-				key: APP_KEY 
-			}, callback);		
+var grabUserInput = function () {
+	var searchField = $(".search").val();
+	return searchField;
 }
 
-var placesAutoComplete = function() {
-	// the following code is from: http://jsfiddle.net/moinsam/SDPHm/
-	var input = document.getElementById('pac-input');
-	var options = {componentRestrictions: {country: 'us'}};
-	// var value = input.val()
-	// console.log(value)
-	    
-	new google.maps.places.Autocomplete(input, options);
+//calls 
+var googleApiCall = function (searchData, callback) {
+	$.get(url, {
+				input: searchData,
+				key: APP_KEY 
+			}, callback);
 
-};
-//define functions
+}		
+
+
