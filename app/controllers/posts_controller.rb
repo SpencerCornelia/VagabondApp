@@ -43,10 +43,8 @@ class PostsController < ApplicationController
 		redirect_to "/places/#{@post.place_id}"
 	end
 
-	private
-
-	# def post_params
-	# 	params.require(:post).permit(:title, :body, :place_id)
-	# end
-
+	def delete
+		@post = Post.find(params[:id])
+		@post.delete
+	end
 end

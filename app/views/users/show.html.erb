@@ -5,8 +5,15 @@
          <%= @user.last_name%> </li>	
 	<li> <%= @user.email%> </li>
 	<li> <%= @user.current_city%> </li>
+	<% join_date = "%m/%d/%Y"%>
+	<li> <%= @user.created_at.strftime("Member since #{join_date}") %> </li>
 </ul>	
 <ul>
-	<li><%= @user.posts[0].body %></li>
+	<h2> Your posts </h2>
+	<% @user.posts.each do |post|%>
+		<li> <%= post.title %> </li>
+		<% place = Place.find(post.place_id) %>
+		<%= place.name %>
+	<% end %>
 </ul>
 
