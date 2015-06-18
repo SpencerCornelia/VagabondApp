@@ -1,5 +1,6 @@
 <%= render partial: "navbar" %>
 <%= image_tag @user.gravatar_url %>
+<%= link_to "Edit", controller: "users", action: "edit", id: @user.id %> <br>
 <ul>
     <li> <%= @user.first_name%>
          <%= @user.last_name%> </li>	
