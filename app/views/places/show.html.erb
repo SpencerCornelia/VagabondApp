@@ -1,4 +1,5 @@
- <h1 id="headerName"> <%= @place.name %> </h1>
+<%= render partial: "layouts/navbar" %>
+<h1 id="headerName"> <%= @place.name %> </h1>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <body>
 	<div id="googleMap" style="width:500px;height:380px;"></div>
@@ -16,11 +17,12 @@
 </script>	
 <div id="formTitle">
 	<%= form_for @post do |f| %>
+		<br>
 		<div>
-			<%= f.text_field :title, placeholder: "Title goes here" %>
-		</div>		
+			<%= f.text_field :title, placeholder: "Title goes here", size: "30" %>
+		</div> 
 		<div>
-			<%= f.text_area :body, placeholder: "Body goes here" %>
+			<%= f.text_area :body, placeholder: "Body goes here", size: "30" %>
 		</div>
 		<div style="display: none">
 			<%= f.text_field :place_id, value: "#{@place.id}" %>
