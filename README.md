@@ -3,6 +3,7 @@
 This app allows users to make posts in cities that they visited.  Their posts can be about whatever they'd like : restaurants, sports events, etc.  
 
 This app was created by :
+
 [Spencer Cornelia](https://www.linkedin.com/in/spencercornelia)
 
 [Stephen Eyer](https://www.linkedin.com/profile/view?id=33581706&authType=NAME_SEARCH&authToken=j82B&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1434678896581%2Ctas%3Astephen)
