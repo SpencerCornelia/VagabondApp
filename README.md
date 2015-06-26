@@ -12,11 +12,4 @@ This app was created by :
 
 [Tae Kim](https://www.linkedin.com/profile/view?id=407947119&authType=NAME_SEARCH&authToken=atWI&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A2-1-2%2CtarId%3A1434678932716%2Ctas%3Atae%20)
 
-Don't be afraid to fork this repo and check it out for yourself!
-
-1. Run db:create
-2. Run 'rails s' command in another command line window
-3. Run db:migrate
-4. Run db:Seed
-
-
+https://vagabondapp.herokuapp.com/
